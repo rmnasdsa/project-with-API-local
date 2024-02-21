@@ -26,6 +26,9 @@ export const products = document.createElement('div');
 main.append(products);
 products.className = 'products';
 productsFundumental();
+productsFundumental();
+productsFundumental();
+productsFundumental();
 countNumberItems();
 
 

@@ -3,28 +3,28 @@
     {
       "id" : 1,
       "name" :"dress",
-      "img": "public/img/clothes-header.jpg",
+      "img": "../public/img/clothes-header.jpg",
       "des":"lorem ipsum",
       "cost" :"23 $"
     },
     {
       "id" : 2,
       "name" :"jacket",
-      "img" : "",
+      "img" : "../public/img/clothes-4.jpg",
       "des" : "lorem ipsum",
       "cost" : "45 $"
     },
     {
       "id" : 3,
       "name" : "blouse",
-      "img" : "",
+      "img" : "https://www.popsci.com/uploads/2022/03/02/aviv-rachmadian-7F7kEHj72MQ-unsplash-scaled.jpg?auto=webp",
       "des" : "lorem ipsum",
       "cost" : "12 $"
     },
     {
       "id" : 4,
       "name" : "shirt",
-      "img" : "",
+      "img" : "https://i.cbc.ca/1.4629616.1524263369!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/peggy-sue-rack.jpg",
       "des" : "lorem ipsum",
       "cost" : "67 $"
     }

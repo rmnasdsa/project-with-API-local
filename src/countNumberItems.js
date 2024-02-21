@@ -1,42 +1,79 @@
-import {product_1} from './productsFundumental.js'
+
 const countNumberItems = () => {
-  let count = document.createElement('span');
-  product_1.append(count);
-  let size = 0;
-  count.innerHTML = size;
+  const product = document.querySelectorAll('.product');
+  const add_btn = document.querySelectorAll('.add-btns');
+  const reduce_btn = document.querySelectorAll('.reduce-btns');
+  const clear_btn = document.querySelectorAll('.clear-btns');
+  let count = document.querySelectorAll('.item-numbers');
+  let counter_1 = 0;
+  let counter_2 = 0;
+  let counter_3 = 0;
+  let counter_4 = 0;
   
   // size = parseInt(size);
-  const add_btn = document.createElement('button');
-  const content_btn = document.createTextNode('+');
-  add_btn.appendChild(content_btn);
-  add_btn.className = 'btns';
-  product_1.append(add_btn);
-  function add() {
-    size +=1;
-    count.innerHTML = `${size}#`;
-  }
-  add_btn.addEventListener("click", add)
+
+  add_btn[0].addEventListener("click", () => {
+    if (counter_1 < 0) counter_1 = 0;
+    counter_1 += 1;
+    count[0].innerHTML = `${counter_1}#`;
+  });
+  add_btn[1].addEventListener("click", () => {
+    if (counter_2 < 0) counter_2 = 0;
+    counter_2 += 1;
+    count[1].innerHTML = `${counter_2}#`;
+  });
+  add_btn[2].addEventListener("click", () => {
+    if (counter_3 < 0) counter_3 = 0;
+    counter_3 += 1;
+    count[2].innerHTML = `${counter_3}#`;
+  });
+  add_btn[3].addEventListener("click", () => {
+    if (counter_4 < 0) counter_4 = 0;
+    counter_4 += 1;
+    count[3].innerHTML = `${counter_4}#`;
+  });
   
-  count.className = 'item-numbers';
-  const reduce_btn = document.createElement('button');
-  reduce_btn.innerText = '-';
-  product_1.append(reduce_btn);
-  reduce_btn.className = 'btns';
-  reduce_btn.addEventListener("click", () => {
-    size -= 1;
-    console.log(size);
-    size < 0 ? null : count.innerHTML = `${size}#`;
+ 
+  reduce_btn[0].addEventListener("click", () => {
+    counter_1 -= 1;
+    counter_1 < 0 ? null : count[0].innerHTML = `${counter_1}#`;
+    
   })
-  const clear_btn = document.createElement('button');
-  product_1.append(clear_btn);
-  clear_btn.innerText = 'clear';
-  clear_btn.className = 'btns';
-  clear_btn.addEventListener("click", function () {
-    size = 0;
-    count.innerHTML = size;
+
+  reduce_btn[1].addEventListener("click", () => {
+    counter_2 -= 1;
+    counter_2 < 0 ? null : count[1].innerHTML = `${counter_2}#`;
+   
+  })
+ 
+  reduce_btn[2].addEventListener("click", () => {
+    counter_3 -= 1;
+    counter_3 < 0 ? null : count[2].innerHTML = `${counter_3}#`;
+    
+  })
+
+  reduce_btn[3].addEventListener("click", () => {
+    counter_4 -= 1;
+    counter_4 < 0 ? null : count[3].innerHTML = `${counter_4}#`;
+   
   })
   
-  
-  
+  clear_btn[0].addEventListener("click", function () {
+    counter_1 = 0;
+    count[0].innerHTML = counter_1;
+  })
+  clear_btn[1].addEventListener("click", function () {
+    counter_2 = 0;
+    count[1].innerHTML = counter_2;
+  })
+  clear_btn[2].addEventListener("click", function () {
+    counter_3 = 0;
+    count[2].innerHTML = counter_3;
+  })
+  clear_btn[3].addEventListener("click", function () {
+    counter_4 = 0;
+    count[3].innerHTML = counter_4;
+  })
+
 }
 export default countNumberItems;

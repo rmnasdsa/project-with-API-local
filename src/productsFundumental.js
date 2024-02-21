@@ -1,62 +1,39 @@
+
 import { products } from './app.js';
-export const product_1 = document.createElement('div');
-export let img_1 = document.createElement('img');
-export const product_name_1 = document.createElement('h1');
-export const product_description_1 = document.createElement('p');
-export const product_cost_1 = document.createElement('h3');
 
-
-export const product_2 = document.createElement('div');
-export const img_2 = document.createElement('img');
-export const product_name_2 = document.createElement('h2');
-export const product_description_2 = document.createElement('p');
-export const product_cost_2 = document.createElement('h3');
-
-
-export const product_3 = document.createElement('div'); 
-export const img_3 = document.createElement('img');
-export const product_name_3 = document.createElement('h2');
-export const product_description_3 = document.createElement('p');
-export const product_cost_3 = document.createElement('h3');
-
-export const product_4 = document.createElement('div');
-export const img_4 = document.createElement('img');
-export const product_name_4 = document.createElement('h2');
-export const product_description_4 = document.createElement('p');
-export const product_cost_4 = document.createElement('h3');
 const productsFundumental = () => {
-  products.appendChild(product_1);
-  product_1.append(img_1);
-  product_1.append(product_name_1);
-  product_1.append(product_description_1);
-  product_1.append(product_cost_1);
-
-
-  products.append(product_2);
-  product_2.append(img_2);
-  img_2.alt = 'clothes';
-  product_2.append(product_name_2);
-  product_2.append(product_description_2);
-  product_2.append(product_cost_2);
-  img_2.alt = 'clothes';
-
-
-
-  products.append(product_3);
-  product_3.append(img_3);
-  product_3.append(product_name_3);
-  product_3.append(product_description_3);
-  product_3.append(product_cost_3);
-  img_3.alt = 'clothes';
-
-
-
-  products.append(product_4);
-  product_4.append(img_4);
-  product_4.append(product_name_4);
-  product_4.append(product_description_4);
-  product_4.append(product_cost_4)
-  img_4.alt = 'clothes';
-
+  const product = document.createElement('div');
+  products.append(product);
+  product.className = 'product';
+  const product_img = document.createElement('img');
+  product.append(product_img);
+  product_img.className = 'product-img';
+  product_img.alt = 'clothes';
+  const product_name = document.createElement('h1');
+  product.append(product_name);
+  product_name.className = 'product-name';
+  const product_description = document.createElement('p');
+  product.append(product_description);
+  product_description.className = 'product-description';
+  const product_cost = document.createElement('h3');
+  product.append(product_cost);
+  product_cost.className = 'product-cost';
+  let count = document.createElement('span');
+  count.className = 'item-numbers';
+  count.innerHTML = 0;
+  product.append(count);
+  const add_btn = document.createElement('button');
+  const content_btn = document.createTextNode('+');
+  add_btn.appendChild(content_btn);
+  add_btn.classList = 'add-btns btns';
+  product.append(add_btn);
+  const reduce_btn = document.createElement('button');
+  reduce_btn.innerText = '-';
+  product.append(reduce_btn);
+  reduce_btn.classList = 'reduce-btns btns';
+  const clear_btn = document.createElement('button');
+  product.append(clear_btn);
+  clear_btn.innerText = 'clear';
+  clear_btn.classList = 'clear-btns btns';
  }
 export default productsFundumental;
